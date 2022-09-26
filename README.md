@@ -5,7 +5,7 @@
  </p>
 <br>
 
-# Contagem para o ano novo
+# Sistema de estacionamento 2.0
 
 ## 🚀 Tecnologias
 
@@ -19,10 +19,15 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Projeto em JS para cadastrar carros em um estacionamento.
 
-Projeto inspirado na video aula do canal [Codigo de estagirio](https://www.youtube.com/watch?v=5YSsfuCgB5A&list=PLDLKWOQSNkl2eW1IMqTFfyfdhYAUvyMsm).
+[Primeiro projeto](https://github.com/jamangueira7/projeto-estacionamento-js)
+Projeto inspirado na video aula do canal [Código de Estagiário](https://www.youtube.com/watch?v=SjH5132XHlo).
 
 <p align="center">
   <img alt="animation" src=".github/imagem1.PNG" width="100%">
+</p>
+
+<p align="center">
+  <img alt="animation" src=".github/imagem2.PNG" width="100%">
 </p>
 
 ## 🚀 Como Rodar
