@@ -27,6 +27,10 @@ Projeto inspirado na video aula do canal [Código de Estagiário](https://www.yo
 </p>
 
 <p align="center">
+  <img alt="animation" src=".github/imagem3.PNG" width="100%">
+</p>
+
+<p align="center">
   <img alt="animation" src=".github/imagem2.PNG" width="100%">
 </p>
 
