@@ -1,6 +1,18 @@
 (function () {
     //isso serve para chamar diretamente igual é feito no jquery $('query selector')
-    const $ = querySelector => document.querySelector(querySelector)
+    const $ = querySelector => document.querySelector(querySelector);
+
+    const getGarage = () => localStorage.garage
+        ? JSON.parse(localStorage.garage)
+        : [];
+
+
+    const formatDate = time => {
+        return new Date(time).toLocaleTimeString('pt-br', {
+            hour: "numeric",
+            minute: "numeric"
+        })
+    };
 
     const addCarToGarage = car => {
         const tr = document.createElement("tr");
@@ -14,7 +26,7 @@
         tr.appendChild(tdLicense);
 
         const tdTime = document.createElement("td");
-        tdTime.innerHTML = `${car.time}`
+        tdTime.innerHTML = `${formatDate(car.time)}`
         tr.appendChild(tdTime);
 
         const tdFinish = document.createElement('td');
@@ -28,6 +40,14 @@
         $("#result").appendChild(tr);
     };
 
+    const renderGarage = () => {
+        const garage = getGarage();
+        console.log(garage)
+        garage.forEach(addCarToGarage);
+    };
+
+    renderGarage();
+
     $("#send")
         .addEventListener("click", event => {
             event.preventDefault();
@@ -40,7 +60,7 @@
                 return;
             }
 
-            $("#error").classList.add("hidden")
+            $("#error").classList.add("hidden");
 
             const car = {
                 model: carModel,
@@ -48,12 +68,10 @@
                 time: new Date()
             };
 
-            const garage = localStorage.garage
-                ? JSON.parse(localStorage.garage)
-                : [];
+            const garage = getGarage();
 
-            localStorage.garage = JSON.stringify(garage);
             garage.push(car);
+            localStorage.garage = JSON.stringify(garage);
 
             addCarToGarage(car);
 
